@@ -80,13 +80,6 @@ El-Alfy.
 .clear-end { clear: inline-end; }
 ```
 
-### Flow-relative Values for `text-align`
-
-```css
-.text-start { text-align: start; }
-.text-end { text-align: end; }
-```
-
 ### Flow-relative Values for `resize`
 
 ```css

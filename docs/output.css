@@ -745,14 +745,6 @@ video {
   text-align: center;
 }
 
-.text-start {
-  text-align: start;
-}
-
-.text-end {
-  text-align: end;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -872,14 +864,6 @@ video {
 
 .clear-end {
   clear: inline-end;
-}
-
-.text-start {
-  text-align: start;
-}
-
-.text-end {
-  text-align: end;
 }
 
 .resize-block {

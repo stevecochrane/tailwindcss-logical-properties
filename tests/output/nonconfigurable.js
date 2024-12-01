@@ -11,12 +11,6 @@ module.exports = `
   .clear-end {
     clear: inline-end
   }
-  .text-start {
-    text-align: start
-  }
-  .text-end {
-    text-align: end
-  }
   .resize-block {
     resize: block
   }

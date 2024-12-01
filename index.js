@@ -18,12 +18,10 @@ const overscrollBehavior = require('./plugins/overscrollBehavior');
 const padding = require('./plugins/padding');
 const resize = require('./plugins/resize');
 const spaceBetween = require('./plugins/spaceBetween');
-const textAlign = require('./plugins/textAlign');
 
 module.exports = plugin(function(helpers) {
   float(helpers);
   clear(helpers);
-  textAlign(helpers);
   resize(helpers);
   overscrollBehavior(helpers);
 
