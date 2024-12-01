@@ -1,16 +1,4 @@
 module.exports = `
-  .float-start {
-    float: inline-start
-  }
-  .float-end {
-    float: inline-end
-  }
-  .clear-start {
-    clear: inline-start
-  }
-  .clear-end {
-    clear: inline-end
-  }
   .resize-block {
     resize: block
   }

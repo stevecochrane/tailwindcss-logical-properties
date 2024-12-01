@@ -71,15 +71,6 @@ El-Alfy.
 
 ## What's Included
 
-### Flow-relative Values for `float` and `clear`
-
-```css
-.float-start { float: inline-start; }
-.float-end { float: inline-end; }
-.clear-start { clear: inline-start; }
-.clear-end { clear: inline-end; }
-```
-
 ### Flow-relative Values for `resize`
 
 ```css
