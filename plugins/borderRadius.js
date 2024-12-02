@@ -20,21 +20,4 @@ module.exports = function({ matchUtilities, theme }) {
     },
     { values: theme('borderRadius') }
   );
-  matchUtilities(
-    {
-      'rounded-ss': (value) => ({
-        borderStartStartRadius: value
-      }),
-      'rounded-se': (value) => ({
-        borderStartEndRadius: value
-      }),
-      'rounded-es': (value) => ({
-        borderEndStartRadius: value
-      }),
-      'rounded-ee': (value) => ({
-        borderEndEndRadius: value
-      })
-    },
-    { values: theme('borderRadius') }
-  );
 };

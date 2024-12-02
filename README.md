@@ -222,9 +222,8 @@ generated.
 
 ### Flow-relative Corner Rounding (`border-radius`)
 
-Utility classes are generated for the `border-start-start-radius`, `border-start-end-radius`,
-`border-end-start-radius`, and `border-end-end-radius` properties for rounding individual corners. There are also
-shorthand utilities for rounding a side of an element. These match the values in your `borderRadius` config object.
+Shorthand utility classes are generated for rounding each side of an element. Utility classes for each individual
+corner are already provided by Tailwind itself. These match the values in your `borderRadius` config object.
 
 ```css
 .rounded-bs-md {
@@ -246,11 +245,6 @@ shorthand utilities for rounding a side of an element. These match the values in
   border-start-end-radius: 0.375rem;
   border-end-end-radius: 0.375rem;
 }
-
-.rounded-ss-md { border-start-start-radius: 0.375rem; }
-.rounded-se-md { border-start-end-radius: 0.375rem; }
-.rounded-es-md { border-end-start-radius: 0.375rem; }
-.rounded-ee-md { border-end-end-radius: 0.375rem; }
 ```
 
 ## What's Not Included

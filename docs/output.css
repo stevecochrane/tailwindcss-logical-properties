@@ -630,22 +630,6 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-ee-xl {
-  border-end-end-radius: 0.75rem;
-}
-
-.rounded-es-xl {
-  border-end-start-radius: 0.75rem;
-}
-
-.rounded-se-xl {
-  border-start-end-radius: 0.75rem;
-}
-
-.rounded-ss-xl {
-  border-start-start-radius: 0.75rem;
-}
-
 .border-0 {
   border-width: 0px;
 }
@@ -1328,22 +1312,6 @@ video {
 .rounded-is-xl {
   border-start-start-radius: 0.75rem;
   border-end-start-radius: 0.75rem;
-}
-
-.rounded-ee-xl {
-  border-end-end-radius: 0.75rem;
-}
-
-.rounded-es-xl {
-  border-end-start-radius: 0.75rem;
-}
-
-.rounded-se-xl {
-  border-start-end-radius: 0.75rem;
-}
-
-.rounded-ss-xl {
-  border-start-start-radius: 0.75rem;
 }
 
 .hover\:bg-gray-100:hover {
