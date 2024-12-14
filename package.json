@@ -13,8 +13,7 @@
   "scripts": {
     "build:demo": "tailwindcss -i docs/input.css -o docs/output.css --config docs/tailwind.config.js",
     "lint": "eslint --ignore-path .eslintignore --cache .",
-    "test": "jest --coverage",
-    "prepare": "husky"
+    "test": "jest --coverage"
   },
   "lint-staged": {
     "*.js": [
