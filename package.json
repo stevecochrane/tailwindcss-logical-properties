@@ -15,12 +15,6 @@
     "lint": "eslint --ignore-path .eslintignore --cache .",
     "test": "jest --coverage"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "jest --bail --coverage --findRelatedTests"
-    ]
-  },
   "dependencies": {
     "tailwindcss": "3.4.13"
   },

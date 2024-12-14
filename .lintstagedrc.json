@@ -1,0 +1,6 @@
+{
+  "*.js": [
+    "eslint",
+    "jest --bail --coverage --findRelatedTests"
+  ]
+}
