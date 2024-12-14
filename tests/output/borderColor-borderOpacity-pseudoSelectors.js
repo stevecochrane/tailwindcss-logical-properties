@@ -16,6 +16,12 @@ module.exports = `
     --tw-border-opacity: 1;
     border-block-start-color: rgb(0 0 0 / var(--tw-border-opacity))
   }
+  @media (min-width: 768px) {
+    .md\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
+      --tw-border-opacity: 1;
+      border-block-start-color: rgb(0 0 0 / var(--tw-border-opacity))
+    }
+  }
   @media (prefers-color-scheme: dark) {
     .dark\\:border-be-black {
       --tw-border-opacity: 1;
@@ -35,10 +41,6 @@ module.exports = `
     }
   }
   @media (min-width: 768px) {
-    .md\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
-      --tw-border-opacity: 1;
-      border-block-start-color: rgb(0 0 0 / var(--tw-border-opacity))
-    }
     @media (prefers-color-scheme: dark) {
       .md\\:dark\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
         --tw-border-opacity: 1;

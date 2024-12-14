@@ -1,7 +1,4 @@
 module.exports = `
-  .max-is-0 {
-    max-inline-size: 0rem
-  }
   .max-is-2xl {
     max-inline-size: 42rem
   }

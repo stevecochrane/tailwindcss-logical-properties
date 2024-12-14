@@ -12,6 +12,11 @@ module.exports = `
   .peer:checked ~ .peer-checked\\:border-bs-black {
     border-block-start-color: #000
   }
+  @media (min-width: 768px) {
+    .md\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
+      border-block-start-color: #000
+    }
+  }
   @media (prefers-color-scheme: dark) {
     .dark\\:border-be-black {
       border-block-end-color: #000
@@ -27,9 +32,6 @@ module.exports = `
     }
   }
   @media (min-width: 768px) {
-    .md\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
-        border-block-start-color: #000
-    }
     @media (prefers-color-scheme: dark) {
         .md\\:dark\\:disabled\\:focus\\:hover\\:border-bs-black:hover:focus:disabled {
           border-block-start-color: #000
