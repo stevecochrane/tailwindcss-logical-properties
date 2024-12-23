@@ -1,5 +1,4 @@
 .DS_Store
-.eslintcache
 .nova/
 coverage/
 node_modules/
