@@ -35,6 +35,7 @@ module.exports = function({ corePlugins, matchUtilities, theme }) {
       }
     },
     {
+      // eslint-disable-next-line no-unused-vars
       values: (({ DEFAULT: _, ...colors }) => colors)(
         flattenColorPalette(theme('borderColor'))
       ),
@@ -97,6 +98,7 @@ module.exports = function({ corePlugins, matchUtilities, theme }) {
       }
     },
     {
+      // eslint-disable-next-line no-unused-vars
       values: (({ DEFAULT: _, ...colors }) => colors)(
         flattenColorPalette(theme('borderColor'))
       ),

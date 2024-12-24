@@ -1,6 +1,17 @@
+const eslint =  require('@eslint/js');
 const pluginJest = require('eslint-plugin-jest');
+const globals = require('globals');
 
 module.exports = [
+  eslint.configs.recommended,
+  {
+      languageOptions: {
+          sourceType: "commonjs",
+          globals: {
+            ...globals.node
+          }
+      }
+  },
   {
     files: [
       '**/*.test.js'
