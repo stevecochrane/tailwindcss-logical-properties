@@ -1,6 +1,4 @@
 {
-  "*.js": [
-    "eslint",
-    "jest --bail --coverage --findRelatedTests"
-  ]
+  "**/*": ["prettier --write --ignore-unknown"],
+  "*.js": ["eslint", "jest --bail --coverage --findRelatedTests"]
 }
