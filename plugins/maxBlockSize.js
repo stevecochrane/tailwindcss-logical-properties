@@ -1,10 +1,10 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'max-bs': (value) => ({
-        maxBlockSize: value
-      })
+      "max-bs": (value) => ({
+        maxBlockSize: value,
+      }),
     },
-    { values: theme('maxHeight') }
+    { values: theme("maxHeight") },
   );
 };

@@ -1,10 +1,10 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'max-is': (value) => ({
-        maxInlineSize: value
-      })
+      "max-is": (value) => ({
+        maxInlineSize: value,
+      }),
     },
-    { values: theme('maxWidth') }
+    { values: theme("maxWidth") },
   );
 };

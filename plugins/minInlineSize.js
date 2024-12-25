@@ -1,10 +1,10 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'min-is': (value) => ({
-        minInlineSize: value
-      })
+      "min-is": (value) => ({
+        minInlineSize: value,
+      }),
     },
-    { values: theme('minWidth') }
+    { values: theme("minWidth") },
   );
 };

@@ -1,23 +1,23 @@
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
-const blockSize = require('./plugins/blockSize');
-const borderColor = require('./plugins/borderColor');
-const borderRadius = require('./plugins/borderRadius');
-const borderWidth = require('./plugins/borderWidth');
-const divideWidth = require('./plugins/divideWidth');
-const inlineSize = require('./plugins/inlineSize');
-const inset = require('./plugins/inset');
-const margin = require('./plugins/margin');
-const maxBlockSize = require('./plugins/maxBlockSize');
-const maxInlineSize = require('./plugins/maxInlineSize');
-const minBlockSize = require('./plugins/minBlockSize');
-const minInlineSize = require('./plugins/minInlineSize');
-const overscrollBehavior = require('./plugins/overscrollBehavior');
-const padding = require('./plugins/padding');
-const resize = require('./plugins/resize');
-const spaceBetween = require('./plugins/spaceBetween');
+const blockSize = require("./plugins/blockSize");
+const borderColor = require("./plugins/borderColor");
+const borderRadius = require("./plugins/borderRadius");
+const borderWidth = require("./plugins/borderWidth");
+const divideWidth = require("./plugins/divideWidth");
+const inlineSize = require("./plugins/inlineSize");
+const inset = require("./plugins/inset");
+const margin = require("./plugins/margin");
+const maxBlockSize = require("./plugins/maxBlockSize");
+const maxInlineSize = require("./plugins/maxInlineSize");
+const minBlockSize = require("./plugins/minBlockSize");
+const minInlineSize = require("./plugins/minInlineSize");
+const overscrollBehavior = require("./plugins/overscrollBehavior");
+const padding = require("./plugins/padding");
+const resize = require("./plugins/resize");
+const spaceBetween = require("./plugins/spaceBetween");
 
-module.exports = plugin(function(helpers) {
+module.exports = plugin(function (helpers) {
   resize(helpers);
   overscrollBehavior(helpers);
 

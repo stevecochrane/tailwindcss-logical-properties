@@ -1,10 +1,10 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'is': (value) => ({
-        inlineSize: value
-      })
+      is: (value) => ({
+        inlineSize: value,
+      }),
     },
-    { values: theme('width') }
+    { values: theme("width") },
   );
 };

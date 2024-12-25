@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -42,9 +42,23 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -85,7 +99,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -129,7 +143,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -220,9 +235,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -269,7 +284,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -354,7 +369,8 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -422,7 +438,9 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -578,8 +596,8 @@ video {
 
 .appearance-none {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .grid-cols-3 {
@@ -683,7 +701,7 @@ video {
 .from-cyan-100 {
   --tw-gradient-from: #cffafe var(--tw-gradient-from-position);
   --tw-gradient-from-position:  ;
-  --tw-gradient-to: rgb(207 250 254 / 0)  var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(207 250 254 / 0) var(--tw-gradient-from-position);
   --tw-gradient-to-position:  ;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -691,16 +709,17 @@ video {
 .from-teal-300 {
   --tw-gradient-from: #5eead4 var(--tw-gradient-from-position);
   --tw-gradient-from-position:  ;
-  --tw-gradient-to: rgb(94 234 212 / 0)  var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(94 234 212 / 0) var(--tw-gradient-from-position);
   --tw-gradient-to-position:  ;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-cyan-400 {
   --tw-gradient-via-position:  ;
-  --tw-gradient-to: rgb(34 211 238 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
-  --tw-gradient-stops: var(--tw-gradient-from), #22d3ee var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-stops: var(--tw-gradient-from),
+    #22d3ee var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-cyan-200 {
@@ -818,20 +837,24 @@ video {
 
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-inner {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .resize-block {
@@ -984,37 +1007,37 @@ video {
 
 .mbe-16 {
   -webkit-margin-after: 4rem;
-          margin-block-end: 4rem;
+  margin-block-end: 4rem;
 }
 
 .mbe-2 {
   -webkit-margin-after: 0.5rem;
-          margin-block-end: 0.5rem;
+  margin-block-end: 0.5rem;
 }
 
 .mbs-16 {
   -webkit-margin-before: 4rem;
-          margin-block-start: 4rem;
+  margin-block-start: 4rem;
 }
 
 .mbs-2 {
   -webkit-margin-before: 0.5rem;
-          margin-block-start: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 .mbs-4 {
   -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
+  margin-block-start: 1rem;
 }
 
 .mie-16 {
   -webkit-margin-end: 4rem;
-          margin-inline-end: 4rem;
+  margin-inline-end: 4rem;
 }
 
 .mis-16 {
   -webkit-margin-start: 4rem;
-          margin-inline-start: 4rem;
+  margin-inline-start: 4rem;
 }
 
 .plb-0 {
@@ -1047,121 +1070,121 @@ video {
 
 .pbe-12 {
   -webkit-padding-after: 3rem;
-          padding-block-end: 3rem;
+  padding-block-end: 3rem;
 }
 
 .pbe-16 {
   -webkit-padding-after: 4rem;
-          padding-block-end: 4rem;
+  padding-block-end: 4rem;
 }
 
 .pbe-24 {
   -webkit-padding-after: 6rem;
-          padding-block-end: 6rem;
+  padding-block-end: 6rem;
 }
 
 .pbs-16 {
   -webkit-padding-before: 4rem;
-          padding-block-start: 4rem;
+  padding-block-start: 4rem;
 }
 
 .pbs-4 {
   -webkit-padding-before: 1rem;
-          padding-block-start: 1rem;
+  padding-block-start: 1rem;
 }
 
 .pbs-6 {
   -webkit-padding-before: 1.5rem;
-          padding-block-start: 1.5rem;
+  padding-block-start: 1.5rem;
 }
 
 .pbs-8 {
   -webkit-padding-before: 2rem;
-          padding-block-start: 2rem;
+  padding-block-start: 2rem;
 }
 
 .pie-16 {
   -webkit-padding-end: 4rem;
-          padding-inline-end: 4rem;
+  padding-inline-end: 4rem;
 }
 
 .pie-2 {
   -webkit-padding-end: 0.5rem;
-          padding-inline-end: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 .pis-16 {
   -webkit-padding-start: 4rem;
-          padding-inline-start: 4rem;
+  padding-inline-start: 4rem;
 }
 
 .pis-2 {
   -webkit-padding-start: 0.5rem;
-          padding-inline-start: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 
 .space-b-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-b-reverse: 0;
   -webkit-margin-before: calc(3rem * calc(1 - var(--tw-space-b-reverse)));
-          margin-block-start: calc(3rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-start: calc(3rem * calc(1 - var(--tw-space-b-reverse)));
   -webkit-margin-after: calc(3rem * var(--tw-space-b-reverse));
-          margin-block-end: calc(3rem * var(--tw-space-b-reverse));
+  margin-block-end: calc(3rem * var(--tw-space-b-reverse));
 }
 
 .space-b-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-b-reverse: 0;
   -webkit-margin-before: calc(0.5rem * calc(1 - var(--tw-space-b-reverse)));
-          margin-block-start: calc(0.5rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-start: calc(0.5rem * calc(1 - var(--tw-space-b-reverse)));
   -webkit-margin-after: calc(0.5rem * var(--tw-space-b-reverse));
-          margin-block-end: calc(0.5rem * var(--tw-space-b-reverse));
+  margin-block-end: calc(0.5rem * var(--tw-space-b-reverse));
 }
 
 .space-b-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-b-reverse: 0;
   -webkit-margin-before: calc(1rem * calc(1 - var(--tw-space-b-reverse)));
-          margin-block-start: calc(1rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-start: calc(1rem * calc(1 - var(--tw-space-b-reverse)));
   -webkit-margin-after: calc(1rem * var(--tw-space-b-reverse));
-          margin-block-end: calc(1rem * var(--tw-space-b-reverse));
+  margin-block-end: calc(1rem * var(--tw-space-b-reverse));
 }
 
 .space-b-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-b-reverse: 0;
   -webkit-margin-before: calc(1.5rem * calc(1 - var(--tw-space-b-reverse)));
-          margin-block-start: calc(1.5rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-start: calc(1.5rem * calc(1 - var(--tw-space-b-reverse)));
   -webkit-margin-after: calc(1.5rem * var(--tw-space-b-reverse));
-          margin-block-end: calc(1.5rem * var(--tw-space-b-reverse));
+  margin-block-end: calc(1.5rem * var(--tw-space-b-reverse));
 }
 
 .space-b-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-b-reverse: 0;
   -webkit-margin-before: calc(2rem * calc(1 - var(--tw-space-b-reverse)));
-          margin-block-start: calc(2rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-start: calc(2rem * calc(1 - var(--tw-space-b-reverse)));
   -webkit-margin-after: calc(2rem * var(--tw-space-b-reverse));
-          margin-block-end: calc(2rem * var(--tw-space-b-reverse));
+  margin-block-end: calc(2rem * var(--tw-space-b-reverse));
 }
 
 .space-i-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-i-reverse: 0;
   -webkit-margin-start: calc(0.5rem * calc(1 - var(--tw-space-i-reverse)));
-          margin-inline-start: calc(0.5rem * calc(1 - var(--tw-space-i-reverse)));
+  margin-inline-start: calc(0.5rem * calc(1 - var(--tw-space-i-reverse)));
   -webkit-margin-end: calc(0.5rem * var(--tw-space-i-reverse));
-          margin-inline-end: calc(0.5rem * var(--tw-space-i-reverse));
+  margin-inline-end: calc(0.5rem * var(--tw-space-i-reverse));
 }
 
 .space-i-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-i-reverse: 0;
   -webkit-margin-start: calc(1rem * calc(1 - var(--tw-space-i-reverse)));
-          margin-inline-start: calc(1rem * calc(1 - var(--tw-space-i-reverse)));
+  margin-inline-start: calc(1rem * calc(1 - var(--tw-space-i-reverse)));
   -webkit-margin-end: calc(1rem * var(--tw-space-i-reverse));
-          margin-inline-end: calc(1rem * var(--tw-space-i-reverse));
+  margin-inline-end: calc(1rem * var(--tw-space-i-reverse));
 }
 
 .space-i-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-i-reverse: 0;
   -webkit-margin-start: calc(2rem * calc(1 - var(--tw-space-i-reverse)));
-          margin-inline-start: calc(2rem * calc(1 - var(--tw-space-i-reverse)));
+  margin-inline-start: calc(2rem * calc(1 - var(--tw-space-i-reverse)));
   -webkit-margin-end: calc(2rem * var(--tw-space-i-reverse));
-          margin-inline-end: calc(2rem * var(--tw-space-i-reverse));
+  margin-inline-end: calc(2rem * var(--tw-space-i-reverse));
 }
 
 .space-b-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1322,7 +1345,7 @@ video {
 .hover\:from-cyan-100:hover {
   --tw-gradient-from: #cffafe var(--tw-gradient-from-position);
   --tw-gradient-from-position:  ;
-  --tw-gradient-to: rgb(207 250 254 / 0)  var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(207 250 254 / 0) var(--tw-gradient-from-position);
   --tw-gradient-to-position:  ;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1395,7 +1418,7 @@ video {
 
   .lg\:gap-x-8 {
     -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
 
   .lg\:pli-0 {
@@ -1404,19 +1427,19 @@ video {
 
   .lg\:pbe-12 {
     -webkit-padding-after: 3rem;
-            padding-block-end: 3rem;
+    padding-block-end: 3rem;
   }
 
   .lg\:pbs-12 {
     -webkit-padding-before: 3rem;
-            padding-block-start: 3rem;
+    padding-block-start: 3rem;
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;
-         column-gap: 3rem;
+    column-gap: 3rem;
   }
 
   .xl\:pli-12 {

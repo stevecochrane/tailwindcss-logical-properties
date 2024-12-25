@@ -1,10 +1,10 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'bs': (value) => ({
-        blockSize: value
-      })
+      bs: (value) => ({
+        blockSize: value,
+      }),
     },
-    { values: theme('height') }
+    { values: theme("height") },
   );
 };

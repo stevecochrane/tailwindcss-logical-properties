@@ -1,30 +1,30 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'plb': (value) => ({
-        paddingBlock: value
+      plb: (value) => ({
+        paddingBlock: value,
       }),
-      'pli': (value) => ({
-        paddingInline: value
-      })
+      pli: (value) => ({
+        paddingInline: value,
+      }),
     },
-    { values: theme('padding') }
+    { values: theme("padding") },
   );
   matchUtilities(
     {
-      'pbs': (value) => ({
-        paddingBlockStart: value
+      pbs: (value) => ({
+        paddingBlockStart: value,
       }),
-      'pbe': (value) => ({
-        paddingBlockEnd: value
+      pbe: (value) => ({
+        paddingBlockEnd: value,
       }),
-      'pis': (value) => ({
-        paddingInlineStart: value
+      pis: (value) => ({
+        paddingInlineStart: value,
       }),
-      'pie': (value) => ({
-        paddingInlineEnd: value
-      })
+      pie: (value) => ({
+        paddingInlineEnd: value,
+      }),
     },
-    { values: theme('padding') }
+    { values: theme("padding") },
   );
 };
