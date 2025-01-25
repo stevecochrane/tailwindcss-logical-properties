@@ -27,6 +27,7 @@
     "jest": "29.7.0",
     "jest-matcher-css": "1.1.0",
     "lint-staged": "15.2.11",
+    "postcss": "8.5.1",
     "prettier": "3.4.2"
   }
 }
