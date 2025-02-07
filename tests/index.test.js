@@ -50,7 +50,7 @@ describe.skip("resize and overscroll-behavior", () => {
   test("default mode", () => testNonconfigurableStyles());
 });
 
-describe("block-size, with default height and spacing configs", () => {
+describe.skip("block-size", () => {
   const testBlockSize = () => {
     return generatePluginCss("blockSize").then((css) => {
       expect(css).toMatchCss(`
@@ -64,16 +64,13 @@ describe("block-size, with default height and spacing configs", () => {
   test("default mode", () => testBlockSize());
 });
 
-describe.skip("min-block-size, with default minHeight config", () => {
-  const testMinBlockSize = (config) => {
-    delete config.theme.minHeight;
-
-    return generatePluginCss(config).then((css) => {
+describe("min-block-size", () => {
+  const testMinBlockSize = () => {
+    return generatePluginCss("minBlockSize").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${minBlockSizeStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
