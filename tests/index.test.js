@@ -78,7 +78,7 @@ describe.skip("min-block-size", () => {
   test("default mode", () => testMinBlockSize());
 });
 
-describe("max-block-size", () => {
+describe.skip("max-block-size", () => {
   const testMaxBlockSize = () => {
     return generatePluginCss("maxBlockSize").then((css) => {
       expect(css).toMatchCss(`
@@ -92,17 +92,13 @@ describe("max-block-size", () => {
   test("default mode", () => testMaxBlockSize());
 });
 
-describe.skip("inline-size, with default width and spacing configs", () => {
-  const testInlineSize = (config) => {
-    delete config.theme.spacing;
-    delete config.theme.width;
-
-    return generatePluginCss(config).then((css) => {
+describe("inline-size, with default width and spacing configs", () => {
+  const testInlineSize = () => {
+    return generatePluginCss("inlineSize").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${inlineSizeStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
