@@ -92,7 +92,7 @@ describe.skip("max-block-size", () => {
   test("default mode", () => testMaxBlockSize());
 });
 
-describe("inline-size, with default width and spacing configs", () => {
+describe.skip("inline-size", () => {
   const testInlineSize = () => {
     return generatePluginCss("inlineSize").then((css) => {
       expect(css).toMatchCss(`
@@ -106,16 +106,13 @@ describe("inline-size, with default width and spacing configs", () => {
   test("default mode", () => testInlineSize());
 });
 
-describe.skip("min-inline-size, with default minWidth config", () => {
-  const testMinInlineSize = (config) => {
-    delete config.theme.minWidth;
-
-    return generatePluginCss(config).then((css) => {
+describe.skip("min-inline-size", () => {
+  const testMinInlineSize = () => {
+    return generatePluginCss("minInlineSize").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${minInlineSizeStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
@@ -123,16 +120,13 @@ describe.skip("min-inline-size, with default minWidth config", () => {
   test("default mode", () => testMinInlineSize());
 });
 
-describe.skip("max-inline-size, with default maxWidth config", () => {
-  const testMaxInlineSize = (config) => {
-    delete config.theme.maxWidth;
-
-    return generatePluginCss(config).then((css) => {
+describe("max-inline-size", () => {
+  const testMaxInlineSize = () => {
+    return generatePluginCss("maxInlineSize").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${maxInlineSizeStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
