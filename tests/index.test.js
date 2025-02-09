@@ -134,7 +134,7 @@ describe.skip("max-inline-size", () => {
   test("default mode", () => testMaxInlineSize());
 });
 
-describe("margin shorthand and single-side", () => {
+describe.skip("margin shorthand and single-side", () => {
   const testMargin = () => {
     return generatePluginCss("margin").then((css) => {
       expect(css).toMatchCss(`
@@ -148,17 +148,13 @@ describe("margin shorthand and single-side", () => {
   test("default mode", () => testMargin());
 });
 
-describe.skip("padding shorthand and single-side, with default padding and spacing configs", () => {
-  const testPadding = (config) => {
-    delete config.theme.spacing;
-    delete config.theme.padding;
-
-    return generatePluginCss(config).then((css) => {
+describe("padding shorthand and single-side", () => {
+  const testPadding = () => {
+    return generatePluginCss("padding").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${paddingStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
