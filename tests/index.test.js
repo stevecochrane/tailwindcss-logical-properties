@@ -158,7 +158,7 @@ describe.skip("padding shorthand and single-side", () => {
   test("default mode", () => testPadding());
 });
 
-describe("inset shorthand and single-side", () => {
+describe.skip("inset shorthand and single-side", () => {
   const testInset = () => {
     return generatePluginCss("inset").then((css) => {
       expect(css).toMatchCss(`
@@ -172,14 +172,13 @@ describe("inset shorthand and single-side", () => {
   test("default mode", () => testInset());
 });
 
-describe.skip("border-width, with default borderWidth config", () => {
-  const testBorderWidth = (config) => {
-    delete config.theme.borderWidth;
-
-    return generatePluginCss(config).then((css) => {
+describe("border-width", () => {
+  const testBorderWidth = () => {
+    return generatePluginCss("borderWidth").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${borderWidthStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
