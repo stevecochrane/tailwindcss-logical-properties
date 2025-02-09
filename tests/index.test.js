@@ -9,8 +9,6 @@ const borderColorWithBorderOpacityStyles = require("./output/borderColor-borderO
 const borderColorWithBorderOpacityPseudoSelectorStyles = require("./output/borderColor-borderOpacity-pseudoSelectors");
 const borderRadiusStyles = require("./output/borderRadius");
 const borderWidthStyles = require("./output/borderWidth");
-const divideWidthStyles = require("./output/divideWidth");
-const divideWidthReverseStyles = require("./output/divideWidth-reverse");
 const inlineSizeStyles = require("./output/inlineSize");
 const insetStyles = require("./output/inset");
 const marginStyles = require("./output/margin");
@@ -169,7 +167,6 @@ describe.skip("inset shorthand and single-side, with default inset and spacing c
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${insetStyles}
-          ${divideWidthReverseStyles}
         `);
     });
   };
@@ -184,7 +181,6 @@ describe.skip("border-width, with default borderWidth config", () => {
     return generatePluginCss(config).then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${divideWidthReverseStyles}
           ${borderWidthStyles}
         `);
     });
@@ -203,7 +199,6 @@ describe.skip("border-color, with default borderColor config", () => {
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${divideWidthReverseStyles}
           ${borderColorStyles}
           ${borderColorPseudoSelectorStyles}
         `);
@@ -220,7 +215,6 @@ describe.skip("border-color, with default borderColor config", () => {
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${divideWidthReverseStyles}
           ${borderColorWithBorderOpacityStyles}
           ${borderColorWithBorderOpacityPseudoSelectorStyles}
         `);
@@ -237,30 +231,10 @@ describe.skip("border-radius side and corner, with default borderRadius config",
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${divideWidthReverseStyles}
           ${borderRadiusStyles}
         `);
     });
   };
 
   test("default mode", () => testBorderRadius());
-});
-
-describe.skip("divide width, with default divideWidth and borderWidth configs", () => {
-  // const testDivideWidth = (config) => {
-  const testDivideWidth = () => {
-    //   delete config.theme.borderWidth;
-    //   delete config.theme.divideWidth;
-
-    return generatePluginCss().then((css) => {
-      expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${divideWidthStyles}
-          ${divideWidthReverseStyles}
-          ${borderWidthStyles}
-        `);
-    });
-  };
-
-  test("default mode", () => testDivideWidth());
 });

@@ -4,7 +4,6 @@ const blockSize = require("./plugins/blockSize");
 const borderColor = require("./plugins/borderColor");
 const borderRadius = require("./plugins/borderRadius");
 const borderWidth = require("./plugins/borderWidth");
-const divideWidth = require("./plugins/divideWidth");
 const inlineSize = require("./plugins/inlineSize");
 const inset = require("./plugins/inset");
 const margin = require("./plugins/margin");
@@ -33,7 +32,6 @@ module.exports = plugin(function (helpers) {
 
   inset(helpers);
 
-  divideWidth(helpers);
   borderWidth(helpers);
   borderColor(helpers);
   borderRadius(helpers);

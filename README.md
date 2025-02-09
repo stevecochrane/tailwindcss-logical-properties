@@ -274,27 +274,6 @@ in your `borderColor` config object.
 }
 ```
 
-### Flow-relative Divide Width
-
-Flow-relative utilities are generated for the Tailwind-specific
-[Divide Width](https://tailwindcss.com/docs/divide-width). These match the values in your `divideWidth` config object.
-All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `.divide-i-reverse` utilities are
-generated.
-
-```css
-.divide-b-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-b-reverse: 0;
-  border-block-start-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
-  border-block-end-width: calc(2px * var(--tw-divide-b-reverse));
-}
-
-.divide-i-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-i-reverse: 0;
-  border-inline-start-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
-  border-inline-end-width: calc(2px * var(--tw-divide-i-reverse));
-}
-```
-
 ### Flow-relative Corner Rounding (`border-radius`)
 
 Shorthand utility classes are generated for rounding each side of an element. Utility classes for each individual
