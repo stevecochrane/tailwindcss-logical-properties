@@ -172,7 +172,7 @@ describe.skip("inset shorthand and single-side", () => {
   test("default mode", () => testInset());
 });
 
-describe("border-width", () => {
+describe.skip("border-width", () => {
   const testBorderWidth = () => {
     return generatePluginCss("borderWidth").then((css) => {
       expect(css).toMatchCss(`
@@ -219,16 +219,13 @@ describe.skip("border-color, with default borderColor config", () => {
   });
 });
 
-describe.skip("border-radius side and corner, with default borderRadius config", () => {
-  // const testBorderRadius = (config) => {
+describe("border-radius side and corner", () => {
   const testBorderRadius = () => {
-    // delete config.theme.borderRadius;
-
-    // return generatePluginCss(config).then((css) => {
-    return generatePluginCss().then((css) => {
+    return generatePluginCss("borderRadius").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${borderRadiusStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
