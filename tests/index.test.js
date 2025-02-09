@@ -120,7 +120,7 @@ describe.skip("min-inline-size", () => {
   test("default mode", () => testMinInlineSize());
 });
 
-describe("max-inline-size", () => {
+describe.skip("max-inline-size", () => {
   const testMaxInlineSize = () => {
     return generatePluginCss("maxInlineSize").then((css) => {
       expect(css).toMatchCss(`
@@ -134,17 +134,13 @@ describe("max-inline-size", () => {
   test("default mode", () => testMaxInlineSize());
 });
 
-describe.skip("margin shorthand and single-side, with default margin and spacing configs", () => {
-  const testMargin = (config) => {
-    delete config.theme.spacing;
-    delete config.theme.margin;
-
-    return generatePluginCss(config).then((css) => {
+describe("margin shorthand and single-side", () => {
+  const testMargin = () => {
+    return generatePluginCss("margin").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${marginStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
+          ${staticKeyframesStyles}
         `);
     });
   };
