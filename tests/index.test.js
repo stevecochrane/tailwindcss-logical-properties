@@ -20,8 +20,6 @@ const minBlockSizeStyles = require("./output/minBlockSize");
 const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
-const spaceBetweenStyles = require("./output/spaceBetween");
-const spaceBetweenReverseStyles = require("./output/spaceBetween-reverse");
 const staticKeyframesStyles = require("./output/staticKeyframes");
 const staticThemeAndBaseStyles = require("./output/staticThemeAndBase.js");
 
@@ -162,24 +160,6 @@ describe("padding shorthand and single-side", () => {
   test("default mode", () => testPadding());
 });
 
-describe.skip("space between, with default space and spacing configs", () => {
-  const testSpaceBetween = (config) => {
-    delete config.theme.spacing;
-    delete config.theme.space;
-
-    return generatePluginCss(config).then((css) => {
-      expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${spaceBetweenStyles}
-          ${spaceBetweenReverseStyles}
-          ${divideWidthReverseStyles}
-        `);
-    });
-  };
-
-  test("default mode", () => testSpaceBetween());
-});
-
 describe.skip("inset shorthand and single-side, with default inset and spacing configs", () => {
   const testInset = (config) => {
     delete config.theme.spacing;
@@ -188,7 +168,6 @@ describe.skip("inset shorthand and single-side, with default inset and spacing c
     return generatePluginCss(config).then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${insetStyles}
           ${divideWidthReverseStyles}
         `);
@@ -205,7 +184,6 @@ describe.skip("border-width, with default borderWidth config", () => {
     return generatePluginCss(config).then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${divideWidthReverseStyles}
           ${borderWidthStyles}
         `);
@@ -225,7 +203,6 @@ describe.skip("border-color, with default borderColor config", () => {
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${divideWidthReverseStyles}
           ${borderColorStyles}
           ${borderColorPseudoSelectorStyles}
@@ -243,7 +220,6 @@ describe.skip("border-color, with default borderColor config", () => {
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${divideWidthReverseStyles}
           ${borderColorWithBorderOpacityStyles}
           ${borderColorWithBorderOpacityPseudoSelectorStyles}
@@ -261,7 +237,6 @@ describe.skip("border-radius side and corner, with default borderRadius config",
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${divideWidthReverseStyles}
           ${borderRadiusStyles}
         `);
@@ -280,7 +255,6 @@ describe.skip("divide width, with default divideWidth and borderWidth configs", 
     return generatePluginCss().then((css) => {
       expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${spaceBetweenReverseStyles}
           ${divideWidthStyles}
           ${divideWidthReverseStyles}
           ${borderWidthStyles}

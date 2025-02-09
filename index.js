@@ -15,7 +15,6 @@ const minInlineSize = require("./plugins/minInlineSize");
 const overscrollBehavior = require("./plugins/overscrollBehavior");
 const padding = require("./plugins/padding");
 const resize = require("./plugins/resize");
-const spaceBetween = require("./plugins/spaceBetween");
 
 module.exports = plugin(function (helpers) {
   resize(helpers);
@@ -31,7 +30,6 @@ module.exports = plugin(function (helpers) {
 
   margin(helpers);
   padding(helpers);
-  spaceBetween(helpers);
 
   inset(helpers);
 

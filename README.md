@@ -193,26 +193,6 @@ the values in your `padding` config object.
 }
 ```
 
-### Flow-relative Space Between
-
-Flow-relative utilities are generated for the Tailwind-specific [Space Between](https://tailwindcss.com/docs/space).
-These match the values in your `space` config object. All of the usual positive and negative values plus
-`.space-b-reverse` and `.space-i-reverse` utilities are generated.
-
-```css
-.space-b-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-b-reverse: 0;
-  margin-block-start: calc(0.25rem * calc(1 - var(--tw-space-b-reverse)));
-  margin-block-end: calc(0.25rem * var(--tw-space-b-reverse));
-}
-
-.space-i-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-i-reverse: 0;
-  margin-inline-start: calc(0.25rem * calc(1 - var(--tw-space-i-reverse)));
-  margin-inline-end: calc(0.25rem * var(--tw-space-i-reverse));
-}
-```
-
 ### Flow-relative Offsets (`top` / `right` / `bottom` / `left`)
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
