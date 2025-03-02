@@ -4,9 +4,6 @@ const tailwindcss = require("@tailwindcss/postcss");
 
 const blockSizeStyles = require("./output/blockSize");
 const borderColorStyles = require("./output/borderColor");
-const borderColorPseudoSelectorStyles = require("./output/borderColor-pseudoSelectors");
-const borderColorWithBorderOpacityStyles = require("./output/borderColor-borderOpacity");
-const borderColorWithBorderOpacityPseudoSelectorStyles = require("./output/borderColor-borderOpacity-pseudoSelectors");
 const borderRadiusStyles = require("./output/borderRadius");
 const borderWidthStyles = require("./output/borderWidth");
 const inlineSizeStyles = require("./output/inlineSize");
@@ -186,37 +183,18 @@ describe.skip("border-width", () => {
   test("default mode", () => testBorderWidth());
 });
 
-describe.skip("border-color, with default borderColor config", () => {
-  test("default mode", () => {
-    // let config = getBaseConfig();
-    // delete config.theme.color;
-    // delete config.theme.borderColor;
-
-    // return generatePluginCss(config).then((css) => {
-    return generatePluginCss().then((css) => {
+describe.skip("border-color", () => {
+  const testBorderColor = () => {
+    return generatePluginCss("borderColor").then((css) => {
       expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${staticThemeAndBaseStyles}
           ${borderColorStyles}
-          ${borderColorPseudoSelectorStyles}
+          ${staticKeyframesStyles}
         `);
     });
-  });
+  };
 
-  test("With borderOpacity core plugin enabled", () => {
-    // let config = getBaseConfig();
-    // config.corePlugins = ["borderOpacity"];
-    // delete config.theme.color;
-    // delete config.theme.borderColor;
-
-    // return generatePluginCss(config).then((css) => {
-    return generatePluginCss().then((css) => {
-      expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${borderColorWithBorderOpacityStyles}
-          ${borderColorWithBorderOpacityPseudoSelectorStyles}
-        `);
-    });
-  });
+  test("default mode", () => testBorderColor());
 });
 
 describe("border-radius side and corner", () => {
