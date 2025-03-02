@@ -1,4 +1,17 @@
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette");
+
 module.exports = function ({ matchUtilities, theme }) {
+  // eslint-disable-next-line no-unused-vars
+  let flattenedColorPalette = (({ DEFAULT: _, ...colors }) => colors)(
+    flattenColorPalette(theme("borderColor")),
+  );
+
+  let valuesAsCustomProperties = {};
+
+  for (const property in flattenedColorPalette) {
+    valuesAsCustomProperties[property] = `var(--color-${property})`;
+  }
+
   matchUtilities(
     {
       "border-lb": (value) => ({
@@ -10,7 +23,7 @@ module.exports = function ({ matchUtilities, theme }) {
         "border-inline-end-color": value,
       }),
     },
-    { values: theme("borderColor") },
+    { values: valuesAsCustomProperties },
   );
   matchUtilities(
     {
@@ -27,6 +40,6 @@ module.exports = function ({ matchUtilities, theme }) {
         "border-inline-end-color": value,
       }),
     },
-    { values: theme("borderColor") },
+    { values: valuesAsCustomProperties },
   );
 };
