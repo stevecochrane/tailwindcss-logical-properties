@@ -1,16 +1,27 @@
 const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = function ({ matchUtilities, theme }) {
+  /*
+    If we just use theme("borderColor") like in our other plugins, that will give us the values of the colors
+    (e.g. `oklch(0.637 0.237 25.331)`) rather than the custom properties. (e.g. `var(--color-red-50)`).
+    We want custom properties so if users customize the property values, these utilities reflect the new values.
+  */
+
   // eslint-disable-next-line no-unused-vars
-  let flattenedColorPalette = (({ DEFAULT: _, ...colors }) => colors)(
+  const flattenedColorPalette = (({ DEFAULT: _, ...colors }) => colors)(
     flattenColorPalette(theme("borderColor")),
   );
 
-  let valuesAsCustomProperties = {};
+  const valuesAsCustomProperties = {};
 
   for (const property in flattenedColorPalette) {
     valuesAsCustomProperties[property] = `var(--color-${property})`;
   }
+
+  // In Tailwind v3 these were included in the theme, but that no longer seems to be the case in v4.
+  valuesAsCustomProperties["current"] = "currentColor";
+  valuesAsCustomProperties["inherit"] = "inherit";
+  valuesAsCustomProperties["transparent"] = "transparent";
 
   matchUtilities(
     {
