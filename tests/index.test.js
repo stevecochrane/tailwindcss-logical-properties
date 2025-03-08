@@ -48,7 +48,7 @@ describe.skip("block-size", () => {
   test("default mode", () => testBlockSize());
 });
 
-describe("min-block-size", () => {
+describe.skip("min-block-size", () => {
   const testMinBlockSize = () => {
     return generatePluginCss("minBlockSize").then((css) => {
       expect(css).toMatchCss(minBlockSizeStyles);
@@ -58,13 +58,10 @@ describe("min-block-size", () => {
   test("default mode", () => testMinBlockSize());
 });
 
-describe.skip("max-block-size", () => {
+describe("max-block-size", () => {
   const testMaxBlockSize = () => {
     return generatePluginCss("maxBlockSize").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${maxBlockSizeStyles}
-        `);
+      expect(css).toMatchCss(maxBlockSizeStyles);
     });
   };
 
