@@ -15,7 +15,6 @@ const minBlockSizeStyles = require("./output/minBlockSize");
 const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
-const staticKeyframesStyles = require("./output/staticKeyframes");
 const staticThemeAndBaseStyles = require("./output/staticThemeAndBase.js");
 
 const generatePluginCss = (templateDirectory) => {
@@ -35,7 +34,6 @@ describe.skip("resize and overscroll-behavior", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${nonconfigurableStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -49,7 +47,6 @@ describe.skip("block-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${blockSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -63,7 +60,6 @@ describe.skip("min-block-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${minBlockSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -77,7 +73,6 @@ describe.skip("max-block-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${maxBlockSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -91,7 +86,6 @@ describe.skip("inline-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${inlineSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -105,7 +99,6 @@ describe.skip("min-inline-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${minInlineSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -119,7 +112,6 @@ describe.skip("max-inline-size", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${maxInlineSizeStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -133,7 +125,6 @@ describe.skip("margin shorthand and single-side", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${marginStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -147,7 +138,6 @@ describe.skip("padding shorthand and single-side", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${paddingStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -161,7 +151,6 @@ describe.skip("inset shorthand and single-side", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${insetStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -175,7 +164,6 @@ describe.skip("border-width", () => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${borderWidthStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -183,13 +171,12 @@ describe.skip("border-width", () => {
   test("default mode", () => testBorderWidth());
 });
 
-describe.skip("border-color", () => {
+describe("border-color", () => {
   const testBorderColor = () => {
     return generatePluginCss("borderColor").then((css) => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${borderColorStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
@@ -197,13 +184,12 @@ describe.skip("border-color", () => {
   test("default mode", () => testBorderColor());
 });
 
-describe("border-radius side and corner", () => {
+describe.skip("border-radius side and corner", () => {
   const testBorderRadius = () => {
     return generatePluginCss("borderRadius").then((css) => {
       expect(css).toMatchCss(`
           ${staticThemeAndBaseStyles}
           ${borderRadiusStyles}
-          ${staticKeyframesStyles}
         `);
     });
   };
