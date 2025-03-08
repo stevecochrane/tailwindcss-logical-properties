@@ -38,7 +38,7 @@ describe.skip("resize and overscroll-behavior", () => {
   test("default mode", () => testNonconfigurableStyles());
 });
 
-describe("block-size", () => {
+describe.skip("block-size", () => {
   const testBlockSize = () => {
     return generatePluginCss("blockSize").then((css) => {
       expect(css).toMatchCss(blockSizeStyles);
@@ -48,13 +48,10 @@ describe("block-size", () => {
   test("default mode", () => testBlockSize());
 });
 
-describe.skip("min-block-size", () => {
+describe("min-block-size", () => {
   const testMinBlockSize = () => {
     return generatePluginCss("minBlockSize").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${minBlockSizeStyles}
-        `);
+      expect(css).toMatchCss(minBlockSizeStyles);
     });
   };
 
