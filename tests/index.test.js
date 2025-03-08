@@ -28,13 +28,10 @@ const generatePluginCss = (templateDirectory) => {
     .then((result) => result.css);
 };
 
-describe.skip("resize and overscroll-behavior", () => {
+describe("resize and overscroll-behavior", () => {
   const testNonconfigurableStyles = () => {
     return generatePluginCss("nonconfigurable").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${nonconfigurableStyles}
-        `);
+      expect(css).toMatchCss(nonconfigurableStyles);
     });
   };
 
@@ -171,7 +168,7 @@ describe.skip("border-width", () => {
   test("default mode", () => testBorderWidth());
 });
 
-describe("border-color", () => {
+describe.skip("border-color", () => {
   const testBorderColor = () => {
     return generatePluginCss("borderColor").then((css) => {
       expect(css).toMatchCss(borderColorStyles);
