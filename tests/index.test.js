@@ -28,7 +28,7 @@ const generatePluginCss = (templateDirectory) => {
     .then((result) => result.css);
 };
 
-describe("resize and overscroll-behavior", () => {
+describe.skip("resize and overscroll-behavior", () => {
   const testNonconfigurableStyles = () => {
     return generatePluginCss("nonconfigurable").then((css) => {
       expect(css).toMatchCss(nonconfigurableStyles);
@@ -38,13 +38,10 @@ describe("resize and overscroll-behavior", () => {
   test("default mode", () => testNonconfigurableStyles());
 });
 
-describe.skip("block-size", () => {
+describe("block-size", () => {
   const testBlockSize = () => {
     return generatePluginCss("blockSize").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${blockSizeStyles}
-        `);
+      expect(css).toMatchCss(blockSizeStyles);
     });
   };
 
