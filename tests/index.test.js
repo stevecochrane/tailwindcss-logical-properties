@@ -174,10 +174,7 @@ describe.skip("border-width", () => {
 describe("border-color", () => {
   const testBorderColor = () => {
     return generatePluginCss("borderColor").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${borderColorStyles}
-        `);
+      expect(css).toMatchCss(borderColorStyles);
     });
   };
 
