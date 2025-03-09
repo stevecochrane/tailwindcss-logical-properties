@@ -27,132 +27,134 @@ const generatePluginCss = (templateDirectory) => {
     .then((result) => result.css);
 };
 
-describe.skip("resize and overscroll-behavior", () => {
-  const testNonconfigurableStyles = () => {
-    return generatePluginCss("nonconfigurable").then((css) => {
-      expect(css).toMatchCss(nonconfigurableStyles);
-    });
-  };
+describe("individual plugin tests", () => {
+  describe("resize and overscroll-behavior", () => {
+    const testNonconfigurableStyles = () => {
+      return generatePluginCss("nonconfigurable").then((css) => {
+        expect(css).toMatchCss(nonconfigurableStyles);
+      });
+    };
 
-  test("default mode", () => testNonconfigurableStyles());
-});
+    test("default mode", () => testNonconfigurableStyles());
+  });
 
-describe.skip("block-size", () => {
-  const testBlockSize = () => {
-    return generatePluginCss("blockSize").then((css) => {
-      expect(css).toMatchCss(blockSizeStyles);
-    });
-  };
+  describe.skip("block-size", () => {
+    const testBlockSize = () => {
+      return generatePluginCss("blockSize").then((css) => {
+        expect(css).toMatchCss(blockSizeStyles);
+      });
+    };
 
-  test("default mode", () => testBlockSize());
-});
+    test("default mode", () => testBlockSize());
+  });
 
-describe.skip("min-block-size", () => {
-  const testMinBlockSize = () => {
-    return generatePluginCss("minBlockSize").then((css) => {
-      expect(css).toMatchCss(minBlockSizeStyles);
-    });
-  };
+  describe.skip("min-block-size", () => {
+    const testMinBlockSize = () => {
+      return generatePluginCss("minBlockSize").then((css) => {
+        expect(css).toMatchCss(minBlockSizeStyles);
+      });
+    };
 
-  test("default mode", () => testMinBlockSize());
-});
+    test("default mode", () => testMinBlockSize());
+  });
 
-describe.skip("max-block-size", () => {
-  const testMaxBlockSize = () => {
-    return generatePluginCss("maxBlockSize").then((css) => {
-      expect(css).toMatchCss(maxBlockSizeStyles);
-    });
-  };
+  describe.skip("max-block-size", () => {
+    const testMaxBlockSize = () => {
+      return generatePluginCss("maxBlockSize").then((css) => {
+        expect(css).toMatchCss(maxBlockSizeStyles);
+      });
+    };
 
-  test("default mode", () => testMaxBlockSize());
-});
+    test("default mode", () => testMaxBlockSize());
+  });
 
-describe.skip("inline-size", () => {
-  const testInlineSize = () => {
-    return generatePluginCss("inlineSize").then((css) => {
-      expect(css).toMatchCss(inlineSizeStyles);
-    });
-  };
+  describe.skip("inline-size", () => {
+    const testInlineSize = () => {
+      return generatePluginCss("inlineSize").then((css) => {
+        expect(css).toMatchCss(inlineSizeStyles);
+      });
+    };
 
-  test("default mode", () => testInlineSize());
-});
+    test("default mode", () => testInlineSize());
+  });
 
-describe.skip("min-inline-size", () => {
-  const testMinInlineSize = () => {
-    return generatePluginCss("minInlineSize").then((css) => {
-      expect(css).toMatchCss(minInlineSizeStyles);
-    });
-  };
+  describe.skip("min-inline-size", () => {
+    const testMinInlineSize = () => {
+      return generatePluginCss("minInlineSize").then((css) => {
+        expect(css).toMatchCss(minInlineSizeStyles);
+      });
+    };
 
-  test("default mode", () => testMinInlineSize());
-});
+    test("default mode", () => testMinInlineSize());
+  });
 
-describe.skip("max-inline-size", () => {
-  const testMaxInlineSize = () => {
-    return generatePluginCss("maxInlineSize").then((css) => {
-      expect(css).toMatchCss(maxInlineSizeStyles);
-    });
-  };
+  describe.skip("max-inline-size", () => {
+    const testMaxInlineSize = () => {
+      return generatePluginCss("maxInlineSize").then((css) => {
+        expect(css).toMatchCss(maxInlineSizeStyles);
+      });
+    };
 
-  test("default mode", () => testMaxInlineSize());
-});
+    test("default mode", () => testMaxInlineSize());
+  });
 
-describe.skip("margin shorthand and single-side", () => {
-  const testMargin = () => {
-    return generatePluginCss("margin").then((css) => {
-      expect(css).toMatchCss(marginStyles);
-    });
-  };
+  describe.skip("margin shorthand and single-side", () => {
+    const testMargin = () => {
+      return generatePluginCss("margin").then((css) => {
+        expect(css).toMatchCss(marginStyles);
+      });
+    };
 
-  test("default mode", () => testMargin());
-});
+    test("default mode", () => testMargin());
+  });
 
-describe.skip("padding shorthand and single-side", () => {
-  const testPadding = () => {
-    return generatePluginCss("padding").then((css) => {
-      expect(css).toMatchCss(paddingStyles);
-    });
-  };
+  describe.skip("padding shorthand and single-side", () => {
+    const testPadding = () => {
+      return generatePluginCss("padding").then((css) => {
+        expect(css).toMatchCss(paddingStyles);
+      });
+    };
 
-  test("default mode", () => testPadding());
-});
+    test("default mode", () => testPadding());
+  });
 
-describe.skip("inset shorthand and single-side", () => {
-  const testInset = () => {
-    return generatePluginCss("inset").then((css) => {
-      expect(css).toMatchCss(insetStyles);
-    });
-  };
+  describe.skip("inset shorthand and single-side", () => {
+    const testInset = () => {
+      return generatePluginCss("inset").then((css) => {
+        expect(css).toMatchCss(insetStyles);
+      });
+    };
 
-  test("default mode", () => testInset());
-});
+    test("default mode", () => testInset());
+  });
 
-describe.skip("border-width", () => {
-  const testBorderWidth = () => {
-    return generatePluginCss("borderWidth").then((css) => {
-      expect(css).toMatchCss(borderWidthStyles);
-    });
-  };
+  describe.skip("border-width", () => {
+    const testBorderWidth = () => {
+      return generatePluginCss("borderWidth").then((css) => {
+        expect(css).toMatchCss(borderWidthStyles);
+      });
+    };
 
-  test("default mode", () => testBorderWidth());
-});
+    test("default mode", () => testBorderWidth());
+  });
 
-describe.skip("border-color", () => {
-  const testBorderColor = () => {
-    return generatePluginCss("borderColor").then((css) => {
-      expect(css).toMatchCss(borderColorStyles);
-    });
-  };
+  describe.skip("border-color", () => {
+    const testBorderColor = () => {
+      return generatePluginCss("borderColor").then((css) => {
+        expect(css).toMatchCss(borderColorStyles);
+      });
+    };
 
-  test("default mode", () => testBorderColor());
-});
+    test("default mode", () => testBorderColor());
+  });
 
-describe("border-radius side and corner", () => {
-  const testBorderRadius = () => {
-    return generatePluginCss("borderRadius").then((css) => {
-      expect(css).toMatchCss(borderRadiusStyles);
-    });
-  };
+  describe.skip("border-radius side and corner", () => {
+    const testBorderRadius = () => {
+      return generatePluginCss("borderRadius").then((css) => {
+        expect(css).toMatchCss(borderRadiusStyles);
+      });
+    };
 
-  test("default mode", () => testBorderRadius());
+    test("default mode", () => testBorderRadius());
+  });
 });
