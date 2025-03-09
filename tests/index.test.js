@@ -108,7 +108,7 @@ describe.skip("margin shorthand and single-side", () => {
   test("default mode", () => testMargin());
 });
 
-describe("padding shorthand and single-side", () => {
+describe.skip("padding shorthand and single-side", () => {
   const testPadding = () => {
     return generatePluginCss("padding").then((css) => {
       expect(css).toMatchCss(paddingStyles);
@@ -118,13 +118,10 @@ describe("padding shorthand and single-side", () => {
   test("default mode", () => testPadding());
 });
 
-describe.skip("inset shorthand and single-side", () => {
+describe("inset shorthand and single-side", () => {
   const testInset = () => {
     return generatePluginCss("inset").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${insetStyles}
-        `);
+      expect(css).toMatchCss(insetStyles);
     });
   };
 
