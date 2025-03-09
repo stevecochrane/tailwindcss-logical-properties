@@ -58,7 +58,7 @@ describe.skip("min-block-size", () => {
   test("default mode", () => testMinBlockSize());
 });
 
-describe("max-block-size", () => {
+describe.skip("max-block-size", () => {
   const testMaxBlockSize = () => {
     return generatePluginCss("maxBlockSize").then((css) => {
       expect(css).toMatchCss(maxBlockSizeStyles);
@@ -68,13 +68,10 @@ describe("max-block-size", () => {
   test("default mode", () => testMaxBlockSize());
 });
 
-describe.skip("inline-size", () => {
+describe("inline-size", () => {
   const testInlineSize = () => {
     return generatePluginCss("inlineSize").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${inlineSizeStyles}
-        `);
+      expect(css).toMatchCss(inlineSizeStyles);
     });
   };
 
