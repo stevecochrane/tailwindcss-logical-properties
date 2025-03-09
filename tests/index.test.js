@@ -17,6 +17,15 @@ const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
 
+/*
+  This "all plugins" test was made because PostCSS was giving me an issue where it would always return the output from
+  the first call. For example, if I ran generatePluginCss on the nonconfigurable styles, and then the block-size
+  styles, the block-size test would fail because it would test against the output of the nonconfigurable plugin.
+  I couldn't find a way to run multiple tests in a single run.
+
+  So if this all plugins test ever fails, we can enable one of the individual plugin tests at a time to help narrow
+  down where the issue is. I hope to fix this at some point but I don't have a solution yet.
+*/
 describe("all plugins at once", () => {
   const generatePluginCss = () => {
     return postcss([postcssImport, tailwindcss()])
