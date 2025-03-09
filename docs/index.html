@@ -101,6 +101,13 @@
                     >Resize</a
                   >
                 </li>
+                <li>
+                  <a
+                    class="block pli-4 rounded hover:bg-gray-100 hover:text-black"
+                    href="#space-between"
+                    >Space Between</a
+                  >
+                </li>
               </ol>
             </nav>
           </div>
@@ -938,6 +945,97 @@ resize-block</textarea
               <textarea class="bg-white resize-inline text-sm md:text-base">
 resize-inline</textarea
               >
+            </div>
+          </section>
+
+          <section id="space-between">
+            <h2 class="font-bold text-2xl">Space Between</h2>
+            <ul class="mbs-2">
+              <li>
+                These use the Flow-relative Margin properties. See
+                <a
+                  class="font-medium text-cyan-600 underline hover:text-cyan-800"
+                  href="#margin"
+                  >Margin Utilities</a
+                >
+                for browser support details.
+              </li>
+            </ul>
+            <div class="space-b-4 mbs-4">
+              <div class="bg-gray-300 flow-root p-4 rounded shadow-inner">
+                <p class="mbe-2 text-sm md:text-base">space-i-2</p>
+                <div class="flex space-i-2">
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                </div>
+              </div>
+              <div class="bg-gray-300 flow-root p-4 rounded shadow-inner">
+                <p class="mbe-2 text-sm md:text-base">space-i-8</p>
+                <div class="flex space-i-8">
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                </div>
+              </div>
+              <div class="bg-gray-300 flow-root p-4 rounded shadow-inner">
+                <p class="mbe-2 text-sm md:text-base">
+                  space-i-8 + space-i-reverse (with flex-row-reverse)
+                </p>
+                <div class="flex flex-row-reverse space-i-8 space-i-reverse">
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                </div>
+              </div>
+              <div class="flex space-i-4">
+                <div
+                  class="bg-gray-300 flex-1 flow-root p-4 rounded shadow-inner"
+                >
+                  <p class="mbe-2 text-sm md:text-base">space-b-2</p>
+                  <div class="flex flex-col space-b-2">
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-300 flex-1 flow-root p-4 rounded shadow-inner"
+                >
+                  <p class="mbe-2 text-sm md:text-base">space-b-8</p>
+                  <div class="flex flex-col space-b-8">
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gray-300 flex-1 flow-root p-4 rounded shadow-inner"
+                >
+                  <p class="mbe-2 text-sm md:text-base">
+                    space-b-8 + space-b-reverse (plus flex-col-reverse)
+                  </p>
+                  <div
+                    class="flex flex-col flex-col-reverse space-b-8 space-b-reverse"
+                  >
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                    <div class="bg-white bs-16 is-16 rounded shadow"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

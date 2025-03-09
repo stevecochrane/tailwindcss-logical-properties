@@ -16,6 +16,8 @@ const minBlockSizeStyles = require("./output/minBlockSize");
 const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
+// const spaceBetweenStyles = require("./output/spaceBetween");
+// const spaceBetweenReverseStyles = require("./output/spaceBetween-reverse");
 
 /*
   This "all plugins" test was made because PostCSS was giving me an issue where it would always return the output from
@@ -26,7 +28,7 @@ const paddingStyles = require("./output/padding");
   So if this all plugins test ever fails, we can enable one of the individual plugin tests at a time to help narrow
   down where the issue is. I hope to fix this at some point but I don't have a solution yet.
 */
-describe("all plugins at once", () => {
+describe.skip("all plugins at once", () => {
   const generatePluginCss = () => {
     return postcss([postcssImport, tailwindcss()])
       .process(
@@ -49,7 +51,7 @@ describe("all plugins at once", () => {
   });
 });
 
-describe.skip("individual plugin tests", () => {
+describe("individual plugin tests", () => {
   const generatePluginCss = (templateDirectory) => {
     return postcss([postcssImport, tailwindcss()])
       .process(
@@ -160,6 +162,24 @@ describe.skip("individual plugin tests", () => {
 
     test("default mode", () => testInset());
   });
+
+  //   describe.skip("space between, with default space and spacing configs", () => {
+  //     const testSpaceBetween = (config) => {
+  //       delete config.theme.spacing;
+  //       delete config.theme.space;
+  //
+  //       return generatePluginCss(config).then((css) => {
+  //         expect(css).toMatchCss(`
+  //             ${nonconfigurableStyles}
+  //             ${spaceBetweenStyles}
+  //             ${spaceBetweenReverseStyles}
+  //             ${divideWidthReverseStyles}
+  //           `);
+  //       });
+  //     };
+  //
+  //     test("default mode", () => testSpaceBetween());
+  //   });
 
   describe.skip("border-width", () => {
     const testBorderWidth = () => {
