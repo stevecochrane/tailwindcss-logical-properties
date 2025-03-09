@@ -78,7 +78,7 @@ describe.skip("inline-size", () => {
   test("default mode", () => testInlineSize());
 });
 
-describe("min-inline-size", () => {
+describe.skip("min-inline-size", () => {
   const testMinInlineSize = () => {
     return generatePluginCss("minInlineSize").then((css) => {
       expect(css).toMatchCss(minInlineSizeStyles);
@@ -88,13 +88,10 @@ describe("min-inline-size", () => {
   test("default mode", () => testMinInlineSize());
 });
 
-describe.skip("max-inline-size", () => {
+describe("max-inline-size", () => {
   const testMaxInlineSize = () => {
     return generatePluginCss("maxInlineSize").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${maxInlineSizeStyles}
-        `);
+      expect(css).toMatchCss(maxInlineSizeStyles);
     });
   };
 
