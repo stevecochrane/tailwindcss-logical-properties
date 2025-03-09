@@ -2,6 +2,7 @@ const postcss = require("postcss");
 const postcssImport = require("postcss-import");
 const tailwindcss = require("@tailwindcss/postcss");
 
+const allPlugins = require("./output/allPlugins");
 const blockSizeStyles = require("./output/blockSize");
 const borderColorStyles = require("./output/borderColor");
 const borderRadiusStyles = require("./output/borderRadius");
@@ -16,7 +17,30 @@ const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
 
-describe("individual plugin tests", () => {
+describe("all plugins at once", () => {
+  const generatePluginCss = () => {
+    return postcss([postcssImport, tailwindcss()])
+      .process(
+        `@import "tailwindcss" source("./templates"); @plugin "../index.js";`,
+        {
+          from: "./tests/templates",
+        },
+      )
+      .then((result) => result.css);
+  };
+
+  describe("all plugins", () => {
+    const testAllPlugins = () => {
+      return generatePluginCss().then((css) => {
+        expect(css).toMatchCss(allPlugins);
+      });
+    };
+
+    test("default mode", () => testAllPlugins());
+  });
+});
+
+describe.skip("individual plugin tests", () => {
   const generatePluginCss = (templateDirectory) => {
     return postcss([postcssImport, tailwindcss()])
       .process(
