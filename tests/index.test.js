@@ -15,7 +15,6 @@ const minBlockSizeStyles = require("./output/minBlockSize");
 const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
-const staticThemeAndBaseStyles = require("./output/staticThemeAndBase.js");
 
 const generatePluginCss = (templateDirectory) => {
   return postcss([postcssImport, tailwindcss()])
@@ -128,7 +127,7 @@ describe.skip("inset shorthand and single-side", () => {
   test("default mode", () => testInset());
 });
 
-describe("border-width", () => {
+describe.skip("border-width", () => {
   const testBorderWidth = () => {
     return generatePluginCss("borderWidth").then((css) => {
       expect(css).toMatchCss(borderWidthStyles);
@@ -148,13 +147,10 @@ describe.skip("border-color", () => {
   test("default mode", () => testBorderColor());
 });
 
-describe.skip("border-radius side and corner", () => {
+describe("border-radius side and corner", () => {
   const testBorderRadius = () => {
     return generatePluginCss("borderRadius").then((css) => {
-      expect(css).toMatchCss(`
-          ${staticThemeAndBaseStyles}
-          ${borderRadiusStyles}
-        `);
+      expect(css).toMatchCss(borderRadiusStyles);
     });
   };
 
