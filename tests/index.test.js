@@ -16,18 +16,18 @@ const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
 
-const generatePluginCss = (templateDirectory) => {
-  return postcss([postcssImport, tailwindcss()])
-    .process(
-      `@import "tailwindcss" source("./templates/${templateDirectory}"); @plugin "../index.js";`,
-      {
-        from: "./tests/templates",
-      },
-    )
-    .then((result) => result.css);
-};
-
 describe("individual plugin tests", () => {
+  const generatePluginCss = (templateDirectory) => {
+    return postcss([postcssImport, tailwindcss()])
+      .process(
+        `@import "tailwindcss" source("./templates/${templateDirectory}"); @plugin "../index.js";`,
+        {
+          from: "./tests/templates",
+        },
+      )
+      .then((result) => result.css);
+  };
+
   describe("resize and overscroll-behavior", () => {
     const testNonconfigurableStyles = () => {
       return generatePluginCss("nonconfigurable").then((css) => {
