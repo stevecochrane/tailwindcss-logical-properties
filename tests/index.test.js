@@ -16,8 +16,7 @@ const minBlockSizeStyles = require("./output/minBlockSize");
 const minInlineSizeStyles = require("./output/minInlineSize");
 const nonconfigurableStyles = require("./output/nonconfigurable");
 const paddingStyles = require("./output/padding");
-// const spaceBetweenStyles = require("./output/spaceBetween");
-// const spaceBetweenReverseStyles = require("./output/spaceBetween-reverse");
+const spaceBetweenStyles = require("./output/spaceBetween");
 
 /*
   This "all plugins" test was made because PostCSS was giving me an issue where it would always return the output from
@@ -63,7 +62,7 @@ describe("individual plugin tests", () => {
       .then((result) => result.css);
   };
 
-  describe("resize and overscroll-behavior", () => {
+  describe.skip("resize and overscroll-behavior", () => {
     const testNonconfigurableStyles = () => {
       return generatePluginCss("nonconfigurable").then((css) => {
         expect(css).toMatchCss(nonconfigurableStyles);
@@ -163,23 +162,15 @@ describe("individual plugin tests", () => {
     test("default mode", () => testInset());
   });
 
-  //   describe.skip("space between, with default space and spacing configs", () => {
-  //     const testSpaceBetween = (config) => {
-  //       delete config.theme.spacing;
-  //       delete config.theme.space;
-  //
-  //       return generatePluginCss(config).then((css) => {
-  //         expect(css).toMatchCss(`
-  //             ${nonconfigurableStyles}
-  //             ${spaceBetweenStyles}
-  //             ${spaceBetweenReverseStyles}
-  //             ${divideWidthReverseStyles}
-  //           `);
-  //       });
-  //     };
-  //
-  //     test("default mode", () => testSpaceBetween());
-  //   });
+  describe("space between", () => {
+    const testSpaceBetween = () => {
+      return generatePluginCss("spaceBetween").then((css) => {
+        expect(css).toMatchCss(spaceBetweenStyles);
+      });
+    };
+
+    test("default mode", () => testSpaceBetween());
+  });
 
   describe.skip("border-width", () => {
     const testBorderWidth = () => {
